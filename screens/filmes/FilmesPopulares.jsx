@@ -4,7 +4,9 @@ import { Text } from 'react-native-paper'
 const FilmesPopulares = () => {
   return (
     <>
-      <Text>FilmesPopulares</Text>
+      {FilmesPopulares.map(item =>(
+        <Text>Nome</Text>
+      ))}
     </>
   )
 }
