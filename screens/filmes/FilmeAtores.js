@@ -30,6 +30,7 @@ const FilmeAtores = ({ navigation, route }) => {
         <Card.Content>
           
           <Text variant='bodyMedium'><strong>Sexo:</strong> {ator.gender}</Text>
+          <Text variant='bodyMedium'><strong>Sexo:</strong> {ator.gender === '1' ? 'Feminino':'Masculino'}</Text>
           <Text variant='bodyMedium'><strong>Nascimento:</strong> {ator.birthday}</Text>
           <Text variant='bodyMedium'><strong>Cidade Natal:</strong> {ator.place_of_birth}</Text>
           <Text variant='bodyMedium'><strong>Popularidade:</strong> {ator.popularity}</Text>
