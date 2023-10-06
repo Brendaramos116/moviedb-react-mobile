@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Text } from 'react-native-paper'
 import apiFilmes from '../../services/apiFilmes'
-import { Image, ScrollView } from 'react-native-web'
+import { Image, ScrollView } from 'react-native'
 
 
 const FilmesDetalhes = ({ navigation, route }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Text } from 'react-native-paper'
 import apiFilmes from '../../services/apiFilmes'
-import { ScrollView } from 'react-native-web'
+import { ScrollView } from 'react-native'
 
 const FilmesPopulares = ({ navigation }) => {
 
