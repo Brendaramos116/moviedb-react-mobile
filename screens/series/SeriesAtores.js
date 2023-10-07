@@ -15,10 +15,10 @@ const SeriesAtores = ({navigation, route}) => {
     useEffect(() => {
       const id = route.params.id
       apiFilmes.get(`/person/${id}`).then(resultado => {
-        setAtor(resultado.data)
+        setAtor(resultado.data.cast)
       })
-      apiFilmes.get(`/person/${id}/series_credits`).then(resultado => {
-        setSeries(resultado.data.cast)
+      apiFilmes.get(`/person/${id}/tv_credits`).then(resultado => {
+        setSeries(resultado.data)
       })
     }, [])
     return (
@@ -40,7 +40,7 @@ const SeriesAtores = ({navigation, route}) => {
             <Text variant='bodyMedium'><strong>Biografia:</strong> {ator.biography}</Text>
           </Card.Content>
         </Card>
-        <Text>Filmes</Text>
+        <Text>Series</Text>
         {series.map(item => (
           <Card
             mode='outlined' key={item.id}
