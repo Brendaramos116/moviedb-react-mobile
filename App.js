@@ -6,6 +6,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FilmesStack from './screens/filmes/FilmesStack';
 import SeriesStack from './screens/series/SeriesStack';
+import AtoresStack from './screens/atores/AtoresStack';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -35,7 +36,7 @@ export default function App() {
             />
             <Tab.Screen
               name="Atores"
-              component={FilmeAtores}
+              component={AtoresStack}
               options={{
                 
                 tabBarIcon: () => (

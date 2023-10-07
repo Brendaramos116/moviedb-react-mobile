@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import apiFilmes from '../../services/apiFilmes'
 import { Card, Text } from 'react-native-paper'
-import { ScrollView } from 'react-native-paper'
+import { ScrollView } from 'react-native'
 import { Image } from 'react-native'
 
 const SeriesDetalhes = ({navigation, route}) => {
@@ -16,7 +16,7 @@ const SeriesDetalhes = ({navigation, route}) => {
             setSerie(resultado.data)
         })
 
-        apiFilmes.get(`/tv/${id}/credits`).then(resultado => {
+        apiFilmes.get(`/person/${id}/tv_credits`).then(resultado => {
             setAtores(resultado.data.cast)
         })
     }, [])
@@ -52,7 +52,7 @@ const SeriesDetalhes = ({navigation, route}) => {
                         <Card.Title
                             title={item.character}
                             subtitle={item.name}
-                            left={(props) => <Image source={{ uri: 'https://image.tmdb.org/t/p/w500/' + item.profile_path }}
+                            left={(props) => <Image source={{ uri: 'https://image.tmdb.org/t/p/w500/' + item.poster_path }}
                                 style={{ width: 40, height: 40, borderRadius: 80 }} />}
                         />
                     </Card>
